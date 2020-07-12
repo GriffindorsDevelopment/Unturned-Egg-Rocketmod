@@ -3,9 +3,7 @@ sleep 10
 
 cd /home/container
 
-if [ "${GAME_AUTOUPDATE}" == "1" ]; then
-    ./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir /home/container +app_update 1110390 +quit
-fi
+./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir /home/container +app_update 1110390 +quit
 
 if [ "${OPENMOD_AUTOUPDATE}" == "1" ]; then
     curl -s https://api.github.com/repos/openmod/OpenMod/releases/latest | jq -r ".assets[] | select(.name | contains(\"OpenMod.Unturned.Module\")) | .browser_download_url" | wget -i -
