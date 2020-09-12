@@ -1,13 +1,16 @@
 #!/bin/bash
-sleep 10
+sleep 2
 
 cd /home/container
 
 ./steam/steamcmd.sh +login anonymous +force_install_dir /home/container +app_update 1110390 +quit
 
-if [ "${OPENMOD_AUTOUPDATE}" == "1" ]; then
-    curl -s https://api.github.com/repos/openmod/OpenMod/releases/latest | jq -r ".assets[] | select(.name | contains(\"OpenMod.Unturned.Module\")) | .browser_download_url" | wget -i -
-	unzip -o -q OpenMod.Unturned.Module*.zip -d Modules && rm OpenMod.Unturned.Module*.zip
+if [ "${GAME_AUTOUPDATE}" == "1" ]; then
+    ./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir /home/container +app_update 1110390 +quit
+fi
+
+if [ "${ROCKET_AUTOUPDATE}" == "1" ]; then
+    cp -r Extras/Rocket.Unturned Modules/
 fi
 
 cp -f steam/linux64/steamclient.so Unturned_Headless_Data/Plugins/x86_64/steamclient.so
