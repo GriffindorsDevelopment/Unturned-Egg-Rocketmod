@@ -8,7 +8,7 @@
     "author": "griffin@trillionservers.com",
     "description": "Unturned dedicated server with OpenMod and Variables.",
     "image": "griffindor30\/trillion_servers_unturned:latest",
-    "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole -port {{SERVER_PORT}} -maxplayers {{MAX_PLAYERS}} +secureserver\/unturned",
+    "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole +secureserver\/unturned",
     "config": {
         "files": "{\r\n    \"Servers\/unturned\/Server\/Commands.dat\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"Port\": \"Port {{server.build.default.port}}\",\r\n            \"Maxplayers\": \"Maxplayers {{server.build.env.MAX_PLAYERS}}\",\r\n            \"Map\": \"Map {{server.build.env.Map}}\",\r\n            \"Name\": \"Name {{server.build.env.Name}}\",\r\n            \"Welcome\": \"Welcome {{server.build.env.Welcome}}\",\r\n            \"Owner\": \"Owner {{server.build.env.Owner}}\",\r\n            \"Cheats\": \"Cheats {{server.build.env.Cheats}}\",\r\n            \"Perspective\": \"Perspective {{server.build.env.Perspective}}\",\r\n            \"Mode\": \"Mode {{server.build.env.Mode}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Loading level: 100%\",\r\n    \"userInteraction\": []\r\n}",
