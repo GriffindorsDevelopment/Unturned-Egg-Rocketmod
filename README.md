@@ -1,6 +1,6 @@
 # pterodactyl-unturned-rocketmod
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/griffindor30/trillion_servers_unturned.svg?style=flat)](https://hub.docker.com/r/michaelcrow/pterodactyl-unturned-openmod)
-[![Docker Pulls](https://img.shields.io/docker/pulls/griffindor30/trillion_servers_unturned.svg?style=flat)](https://hub.docker.com/r/griffindor30/trillion_servers_unturned)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
+[![Docker Pulls](https://img.shields.io/docker/pulls/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
 [![Discord](https://img.shields.io/discord/587497033712140288)](https://discord.gg/7Xrqx2T)
 ![](https://img.shields.io/badge/status-prod-informational)
 
