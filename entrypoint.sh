@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 2
+sleep 1
 
 cd /home/container
 
