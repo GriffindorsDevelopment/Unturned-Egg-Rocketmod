@@ -3,8 +3,6 @@ sleep 1
 
 cd /home/container
 
-apt install -y libgdiplus
-
 ./steam/steamcmd.sh +login anonymous +force_install_dir /home/container +app_update 1110390 +quit
 
 
