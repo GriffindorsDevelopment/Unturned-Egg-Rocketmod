@@ -1,7 +1,7 @@
 # pterodactyl-unturned-rocketmod
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
 [![Docker Pulls](https://img.shields.io/docker/pulls/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
-[![Discord](https://img.shields.io/discord/587497033712140288)](https://discord.gg/7Xrqx2T)
+[![Discord](https://img.shields.io/discord/328932413428465674)](https://discord.gg/BbnkdtX)
 ![](https://img.shields.io/badge/status-prod-informational)
 
 Pterodactyl Unturned using Unturned Dedicated Server
@@ -17,3 +17,6 @@ Pterodactyl Unturned using Unturned Dedicated Server
 Just simply import `egg-unturned-rocketmod.json` to your panel and then you can create a server.
 
 Also be noticed that you should allocate `port+1` and `port+2` to a server.
+
+## How to Report and Issue
+Head to the Issues Tab and open a issue and explain your issue please add screenshots and any errors you encounter while installing the Unturned Serve rusing this egg.
