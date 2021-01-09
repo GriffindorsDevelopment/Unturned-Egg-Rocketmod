@@ -7,10 +7,11 @@
   "name": "Unturned-Rocketmod",
   "author": "griffin@trillionservers.com",
   "description": "Unturned dedicated server with Rocketmod and Variables.",
+  "features":  null,
   "image": "griffindor30\/unturned-egg-rocketmod:latest",
-  "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole +secureserver\/unturned",
+  "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole -port {{SERVER_PORT}} -maxplayers {{MAX_PLAYERS}} -map {{SERVER_MAP}} -perspective {{PERSPECTIVE}} -mode {{GAMEMODE}} -name {{NAME}} +secureserver\/unturned",
   "config": {
-    "files": "{\r\n    \"Servers\/unturned\/Server\/Commands.dat\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"Port\": \"Port {{server.build.default.port}}\",\r\n            \"Maxplayers\": \"Maxplayers {{server.build.env.MAX_PLAYERS}}\",\r\n            \"Map\": \"Map {{server.build.env.Map}}\",\r\n            \"Name\": \"Name {{server.build.env.Name}}\",\r\n            \"Welcome\": \"Welcome {{server.build.env.Welcome}}\",\r\n            \"Owner\": \"Owner {{server.build.env.Owner}}\",\r\n            \"Cheats\": \"Cheats {{server.build.env.Cheats}}\",\r\n            \"Perspective\": \"Perspective {{server.build.env.Perspective}}\",\r\n            \"Mode\": \"Mode {{server.build.env.Mode}}\"\r\n        }\r\n    }\r\n}",
+    "files": "{}",
     "startup": "{\r\n    \"done\": \"Loading level: 100%\",\r\n    \"userInteraction\": []\r\n}",
     "logs": "{\r\n    \"custom\": true,\r\n    \"location\": \"latest.log\"\r\n}",
     "stop": "shutdown"
@@ -28,8 +29,8 @@
       "description": "Max players allowed to play in the server",
       "env_variable": "MAX_PLAYERS",
       "default_value": "24",
-      "user_viewable": 1,
-      "user_editable": 0,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|integer|between:1,24"
     },
     {
@@ -37,8 +38,8 @@
       "description": "Input 1 to enable or 0 to disable",
       "env_variable": "ROCKET_AUTOUPDATE",
       "default_value": "1",
-      "user_viewable": 1,
-      "user_editable": 1,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|integer|between:0,1"
     },
     {
@@ -46,71 +47,44 @@
       "description": "Input 1 to enable or 0 to disable",
       "env_variable": "GAME_AUTOUPDATE",
       "default_value": "1",
-      "user_viewable": 1,
-      "user_editable": 1,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|integer|between:0,1"
     },
     {
       "name": "Map",
       "description": "Set the map for the server",
-      "env_variable": "Map",
+      "env_variable": "SERVER_MAP",
       "default_value": "PEI",
-      "user_viewable": 1,
-      "user_editable": 1,
-      "rules": "required|string|max:20"
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|max:40"
     },
     {
       "name": "Name",
       "description": "This sets the Server Name",
-      "env_variable": "Name",
+      "env_variable": "NAME",
       "default_value": "Unturned Server",
-      "user_viewable": 1,
-      "user_editable": 1,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|string|max:60"
-    },
-    {
-      "name": "Welcome",
-      "description": "This Sets the Welcome Message",
-      "env_variable": "Welcome",
-      "default_value": "Welcome!",
-      "user_viewable": 1,
-      "user_editable": 1,
-      "rules": "required|string|max:60"
-    },
-    {
-      "name": "Owner",
-      "description": "You set the Owners Steamid64 to automatically add them as admin.",
-      "env_variable": "Owner",
-      "default_value": "",
-      "user_viewable": 1,
-      "user_editable": 1,
-      "rules": "required|string|max:40"
-    },
-    {
-      "name": "Cheats",
-      "description": "This enables or disables cheats.",
-      "env_variable": "Cheats",
-      "default_value": "false",
-      "user_viewable": 1,
-      "user_editable": 1,
-      "rules": "required|string|max:20"
     },
     {
       "name": "Perspective",
       "description": "This changes the Perspectives in your server.",
-      "env_variable": "Perspective",
+      "env_variable": "PERSPECTIVE",
       "default_value": "Both",
-      "user_viewable": 1,
-      "user_editable": 1,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|string|max:20"
     },
     {
       "name": "Mode",
       "description": "This sets the difficulty of your server.Hard,Normal,Easy",
-      "env_variable": "Mode",
+      "env_variable": "GAMEMODE",
       "default_value": "Easy",
-      "user_viewable": 1,
-      "user_editable": 1,
+      "user_viewable": true,
+      "user_editable": true,
       "rules": "required|string|max:20"
     }
   ]
