@@ -9,7 +9,7 @@
   "description": "Unturned dedicated server with Rocketmod and Variables.",
   "features":  null,
   "image": "griffindor30\/unturned-egg-rocketmod:latest",
-  "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole -port {{SERVER_PORT}} -maxplayers {{MAX_PLAYERS}} -map {{SERVER_MAP}} -perspective {{PERSPECTIVE}} -mode {{GAMEMODE}} -name {{NAME}} +secureserver\/unturned",
+  "startup": ".\/Unturned_Headless.x86_64 -batchmode -nographics -ThreadedConsole -port {{SERVER_PORT}} -maxplayers {{MAX_PLAYERS}} -map {{SERVER_MAP}} -perspective {{PERSPECTIVE}} -mode {{GAMEMODE}} -name {{NAME}} -GSLT {{GAMESERVERLOGINTOKEN}} -{PVEPVP} +secureserver\/unturned",
   "config": {
     "files": "{}",
     "startup": "{\r\n    \"done\": \"Loading level: 100%\",\r\n    \"userInteraction\": []\r\n}",
@@ -24,15 +24,6 @@
     }
   },
   "variables": [
-    {
-      "name": "Max Players",
-      "description": "Max players allowed to play in the server",
-      "env_variable": "MAX_PLAYERS",
-      "default_value": "24",
-      "user_viewable": true,
-      "user_editable": true,
-      "rules": "required|integer|between:1,24"
-    },
     {
       "name": "Rocketmod Auto Update",
       "description": "Input 1 to enable or 0 to disable",
@@ -58,7 +49,7 @@
       "default_value": "PEI",
       "user_viewable": true,
       "user_editable": true,
-      "rules": "required|string|max:40"
+      "rules": "required|string|max:60"
     },
     {
       "name": "Name",
@@ -76,7 +67,7 @@
       "default_value": "Both",
       "user_viewable": true,
       "user_editable": true,
-      "rules": "required|string|max:20"
+      "rules": "required|string|max:60"
     },
     {
       "name": "Mode",
@@ -85,7 +76,43 @@
       "default_value": "Easy",
       "user_viewable": true,
       "user_editable": true,
-      "rules": "required|string|max:20"
+      "rules": "required|string|max:60"
+    },
+    {
+      "name": "PVP/PVE",
+      "description": "This sets your Server either to PVP or PVE.",
+      "env_variable": "PVEPVP",
+      "default_value": "PVP",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|max:60"
+    },
+    {
+      "name": "Password",
+      "description": "Set a password on your Unturned Server",
+      "env_variable": "PASSWORD",
+      "default_value": "",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "nullable|string|max:60"
+    },
+    {
+      "name": "Max Players",
+      "description": "Max players allowed to play in the server",
+      "env_variable": "MAX_PLAYERS",
+      "default_value": "24",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|integer|between:1,24"
+    },
+    {
+      "name": "Game Server Login Token",
+      "description": "Unturned Dedicated Server authentication. You can get a token here: https://steamcommunity.com/dev/managegameservers",
+      "env_variable": "GAMESERVERLOGINTOKEN",
+      "default_value": "",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "nullable|string|max:40"
     }
   ]
 }
