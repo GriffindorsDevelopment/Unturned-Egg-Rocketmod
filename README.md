@@ -16,3 +16,5 @@ Just simply import `egg-unturned-rocketmod.json` to your panel and then you can 
 
 ## How to Report and Issue
 Head to the Issues Tab and open a issue and explain your issue please add screenshots and any errors you encounter while installing the Unturned Server using this egg.
+
+Also be noticed that you should allocate `port+1` and `port+2` to a server.
