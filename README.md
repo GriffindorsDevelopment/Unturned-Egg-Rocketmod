@@ -4,5 +4,6 @@
 [![Discord](https://img.shields.io/discord/328932413428465674)](https://discord.gg/BbnkdtX)
 ![](https://img.shields.io/badge/status-prod-informational)
 
-#This Egg is no longer being maintained and has moved here: https://github.com/griffindor301/unturned-egg-pterodactyl
-#This Egg has been updated to support both Openmod and Rocketmod.
+# This Egg is no longer being maintained and has moved here: https://github.com/griffindor301/unturned-egg-pterodactyl
+
+# This Egg has been updated to support both Openmod and Rocketmod.
