@@ -1,1 +1,10 @@
 # Unturned-Egg-Rocketmod
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
+[![Docker Pulls](https://img.shields.io/docker/pulls/griffindor30/unturned-egg-rocketmod.svg?style=flat)](https://hub.docker.com/r/griffindor30/unturned-egg-rocketmod)
+[![Discord](https://img.shields.io/discord/328932413428465674)](https://discord.gg/BbnkdtX)
+![](https://img.shields.io/badge/status-prod-informational)
+[![GitHub license](https://img.shields.io/github/license/GriffindorsDevelopment/Unturned-Egg-Rocketmod)](https://github.com/GriffindorsDevelopment/Unturned-Egg-Rocketmod/StrapDown.js/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/GriffindorsDevelopment/Unturned-Egg-Rocketmod)](https://GitHub.com/GriffindorsDevelopment/Unturned-Egg-Rocketmod/releases/)
+[![Github all releases](https://img.shields.io/github/downloads/GriffindorsDevelopment/Unturned-Egg-Rocketmod/total.svg)](https://GitHub.com/GriffindorsDevelopment/Unturned-Egg-Rocketmod/releases/)
+[![GitHub issues](https://img.shields.io/github/issues/GriffindorsDevelopment/Unturned-Egg-Rocketmod)](https://GitHub.com/GriffindorsDevelopment/Unturned-Egg-Rocketmod/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/GriffindorsDevelopment/Unturned-Egg-Rocketmod)](https://GitHub.com/GriffindorsDevelopment/Unturned-Egg-Rocketmod/StrapDown.js/pull/)
